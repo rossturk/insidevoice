@@ -27,7 +27,7 @@
 #
 # This will be the name of your mud.
 #
-name : Lima Mud - FluffOS 2019 Demo
+name : Inside Voice
 
 #
 # [ optional ]
@@ -43,7 +43,7 @@ websocket http dir: ../build/bin/www
 # This should be the absolute pathname to where you placed your copy of
 # the Lima Mudlib.
 #
-mudlib directory : ./lib
+mudlib directory : /home/rturk/projects/insidevoice/lib
 
 # ------------------------------------------------------------------------
 #

@@ -11,3 +11,6 @@ tmp_*
 !/open/README
 !/lib/data/config
 !/lib/log/README
+src/local_options
+.flox/run
+log/
