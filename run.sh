@@ -1,2 +1,2 @@
 #!/bin/sh
-./build/bin/driver config.lima
+./build/bin/driver config.insidevoice

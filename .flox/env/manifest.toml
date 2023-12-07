@@ -24,3 +24,8 @@ ICU_ROOT = "$FLOX_ENV"
 OPENSSL_ROOT_DIR = "$FLOX_ENV"
 ZLIB_ROOT = "$FLOX_ENV"
 PCRE_ROOT = "$FLOX_ENV"
+
+[hook]
+script= """
+	./build.sh && ./run.sh
+"""
