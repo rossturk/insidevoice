@@ -1,2 +1,2 @@
-#!/bin/bash
+#!/bin/sh
 ./build/bin/driver config.lima
