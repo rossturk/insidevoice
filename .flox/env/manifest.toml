@@ -27,5 +27,8 @@ PCRE_ROOT = "$FLOX_ENV"
 
 [hook]
 script= """
-	./build.sh && ./run.sh
+	if [ ! -d build ]; then
+		./build.sh
+	fi
+	./run.sh
 """
