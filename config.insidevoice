@@ -34,7 +34,8 @@ name : Inside Voice
 #
 # This will be the port number that your users will connect to
 #
-external_port_1: websocket 7878
+external_port_1: websocket 2001
+external_port_2: telnet 2000
 websocket http dir: ../build/bin/www
 
 #
