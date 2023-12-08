@@ -23,6 +23,7 @@ strace = {}
 [hook]
 script= """
 	if [ ! -d build ]; then
+		echo "Hey! First time. Building."
 		mkdir -p build
 
 		# fix me, should use cmake variables
@@ -40,5 +41,4 @@ script= """
 		make install
 		popd
 	fi
-	./run.sh
 """
