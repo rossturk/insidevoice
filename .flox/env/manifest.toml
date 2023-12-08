@@ -19,16 +19,26 @@ bison = {}
 strace = {}
 
 [vars]
-ICQ_DIR = "$FLOX_ENV"
-ICU_ROOT = "$FLOX_ENV"
-OPENSSL_ROOT_DIR = "$FLOX_ENV"
-ZLIB_ROOT = "$FLOX_ENV"
-PCRE_ROOT = "$FLOX_ENV"
 
 [hook]
 script= """
 	if [ ! -d build ]; then
-		./build.sh
+		mkdir -p build
+
+		# fix me, should use cmake variables
+		cp -f local_options ./driver/src/
+
+		export ICQ_DIR="$FLOX_ENV"
+		export ICU_ROOT="$FLOX_ENV"
+		export OPENSSL_ROOT_DIR="$FLOX_ENV"
+		export ZLIB_ROOT="$FLOX_ENV"
+		export PCRE_ROOT="$FLOX_ENV"
+		echo "$ICU_DIR"
+		pushd build
+		cmake ../driver -DPACKAGE_UIDS=OFF -DPACKAGE_DB=OFF
+
+		make install
+		popd
 	fi
 	./run.sh
 """
